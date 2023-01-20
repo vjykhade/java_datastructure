@@ -37,7 +37,7 @@ public class ArrayOperations {
                 if (inputArray == null)
                 {
                     System.out.println("Array not inserted yet, insert array first and then display it");
-                    System.out.print("Do you continue to insert array press - 9 or press enter : ");
+                    System.out.print("Do you continue to insert array press - 9 or press 0 : ");
                     break;
                 }
                 else
@@ -52,7 +52,7 @@ public class ArrayOperations {
                 {
                     Arrays.sort(inputArray);
                     System.out.println("Array sorted successfully, please go Array menu and check result on DISPLAY option.");   
-                    System.out.print("Do you continue in array menu enter - 9 or press enter : ");   
+                    System.out.print("Do you continue in array menu enter - 9 or press 0 : ");   
                 }
                 else if (sortOrder == 2)
                 {
@@ -67,7 +67,7 @@ public class ArrayOperations {
                         }     
                     } 
                     System.out.println("Array sorted successfully, please go Array menu and check result on DISPLAY option.");   
-                    System.out.print("Do you continue in array menu enter - 9 or press enter : ");   
+                    System.out.print("Do you continue in array menu enter - 9 or press 0 : ");   
                 }
                 else if (sortOrder == 3)
                 {
@@ -82,7 +82,7 @@ public class ArrayOperations {
                 if (inputArray == null)
                 {
                     System.out.println("Array not inserted yet, insert array first and then display it");
-                    System.out.print("Do you continue to insert array press - 9 or press enter : ");
+                    System.out.print("Do you continue to insert array press - 9 or press 0 : ");
                     break;
                 }
                 else
@@ -101,7 +101,7 @@ public class ArrayOperations {
                     if (i == inputArray.length)  
                     System.out.println(search + " isn't present in array.");  
                 }
-                System.out.print("Do you continue in array menu enter - 9 or press enter : ");
+                System.out.print("Do you continue in array menu enter - 9 or press 0 : ");
                 break;
                 //Display the Array Elements
                 case 4:
@@ -109,7 +109,7 @@ public class ArrayOperations {
                 if (inputArray == null)
                 {
                     System.out.println("Array not inserted yet, insert array first and then display it");
-                    System.out.print("Do you continue to insert array press - 9 or press enter : ");
+                    System.out.print("Do you continue to insert array press - 9 or press 0 : ");
                     break;
                 }
                 else
@@ -121,7 +121,7 @@ public class ArrayOperations {
                 }
                 System.out.println("");
                 }
-                System.out.print("Do you continue in array menu enter - 9 or press enter : ");
+                System.out.print("Do you continue in array menu enter - 9 or press 0 : ");
                 break;
                 case 5:
                 System.exit(0);;

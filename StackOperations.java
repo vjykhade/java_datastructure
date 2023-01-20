@@ -25,7 +25,7 @@ public class StackOperations {
                 if(top == inputArray.length-1)
                 {
                     System.out.println("Stack is overflow can't push elements");
-                    System.out.print("Do you want pop some elements in stack press 9 or press enter : ");
+                    System.out.print("Do you want pop some elements in stack press 9 or press 0 : ");
                 }
                 else
                 {
@@ -34,7 +34,7 @@ public class StackOperations {
                     inputArray[++top] = value;
                     System.err.println("Element pushed in stack successfully.");
                 }
-                System.out.print("Do you want continue in stack menu press 9 or press enter : ");
+                System.out.print("Do you want continue in stack menu press 9 or press 0 : ");
                 break;
                 //Pop the Element from Stack
                 case 2:
@@ -49,12 +49,12 @@ public class StackOperations {
                     inputArray [top] = inputArray[top--] ;
                     System.err.println("Element popped in stack successfully.");
                 }
-                System.out.print("Do you want continue in stack menu press 9 or press enter : ");
+                System.out.print("Do you want continue in stack menu press 9 or press 0 : ");
                 break;
                 //Peek element in stack
                 case 3:
                 System.out.println("Top Element is : "+inputArray[top]);
-                System.out.print("Do you want continue in stack menu press 9 or press enter : ");
+                System.out.print("Do you want continue in stack menu press 9 or press 0 : ");
                 break;
                 //Check stack is empty
                 case 4:
@@ -77,7 +77,7 @@ public class StackOperations {
                 {
                     System.err.println(inputArray[i]);
                 }
-                System.out.print("Do you want continue in stack menu press 9 or press enter : ");
+                System.out.print("Do you want continue in stack menu press 9 or press 0 : ");
                 break;
                 case 6:
                 System.exit(0);
@@ -88,7 +88,7 @@ public class StackOperations {
             }
 
         }while(scan.nextInt()== 9);
-
+       
     }
     
 }

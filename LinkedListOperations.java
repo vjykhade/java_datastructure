@@ -14,8 +14,8 @@ public class LinkedListOperations {
 			this.next = null;
 		}
 	}
-
-	Node insert (Node head, int data)
+	// Inserting Elements at Begining of LinkedList
+	Node insertInBegining (Node head, int data)
 	{
 		Node temp = new Node(data);
 		if(head == null)
@@ -29,44 +29,46 @@ public class LinkedListOperations {
 		}
 		return head;
 	}
+	// Inserting Elements at the End of LinkedList
 	Node insertInEnd(int key,Node head)
 	{
-		Node ttmp=new Node(key);
-		Node ttmp1=head;
+		Node temp=new Node(key);
+		Node temp1=head;
 		
-		if(ttmp1==null)
-			head=ttmp;
+		if(temp1==null)
+			head=temp;
 		else
 		{
-			while(ttmp1.next!=null)
-					ttmp1=ttmp1.next;
-			ttmp1.next=ttmp;
+			while(temp1.next!=null)
+			temp1=temp1.next;
+			temp1.next=temp;
 			
 		}
 		return head;		
 	}
-
+	// Inserting Elements at specific position of LinkedList
 	Node insertAtPos(int key,int pos,Node head)
 	{
-		Node ttmp=new Node(key);
+		Node temp=new Node(key);
 		
 		if(pos==1)
 		{
-			ttmp.next=head;
-			head=ttmp;
+			temp.next=head;
+			head=temp;
 		}
 		else
 		{
-			Node ttmp1=head;
-			for(int i=1;ttmp1!=null && i<pos;i++)
-				ttmp1=ttmp1.next;
-			ttmp.next=ttmp1.next;
-			ttmp1.next=ttmp;
+			Node temp1=head;
+			for(int i=1;temp1!=null && i<pos;i++)
+			temp1=temp1.next;
+			temp.next=temp1.next;
+			temp1.next=temp;
 		}
 		
 		return head;
 	}
-	Node delete(int pos,Node head)
+	//Delete element from LinkedList
+	Node deleteElements(int pos,Node head)
 	{
 		Node ttmp=head;
 		if(pos==1)
@@ -79,6 +81,7 @@ public class LinkedListOperations {
 		}
 		return head;
 	}
+	//Calculate length of LinkedList
 	int length(Node head)
 	{
 		Node ttmp=head;
@@ -94,14 +97,14 @@ public class LinkedListOperations {
 		}
 		return c;
 	}
-	Node reverse(Node head)
+	//Reverse Elements of LinkedList
+	Node reverseElements(Node head)
 	{
 		Node prevLNode=null,curLNode=head,nextLNode=null;
 		while(curLNode!=null)
 		{
 			nextLNode=curLNode.next;
 			curLNode.next=prevLNode;
-			
 			prevLNode=curLNode;
 			curLNode=nextLNode;
 		}
@@ -109,8 +112,8 @@ public class LinkedListOperations {
 		head=prevLNode;
 		return head;
 	}
-	
-	void display(Node head)
+	//Display the LinkedList Elements
+	void displayElements(Node head)
 	{
 		Node ttmp=head;
 		while(ttmp!=null)
@@ -141,44 +144,44 @@ public class LinkedListOperations {
             {
                 case 1:
                 System.out.print("Enter Element to add in Linked List: ");
-                list.head = list.insert(list.head, scan.nextInt());
+                list.head = list.insertInBegining(list.head, scan.nextInt());
 				System.out.println("Data Inserted");
-				System.out.print("Do you continue in array menu - 9 or press enter : ");
+				System.out.print("Do you continue in array menu - 9 or press 0 : ");
 				break;
 				case 2:
 				System.out.print("Enter Element to add in end of Linked List: ");
                 list.head = list.insertInEnd(scan.nextInt(),list.head);
 				System.out.println("Data Inserted");
-				System.out.print("Do you continue in array menu - 9 or press enter : ");
+				System.out.print("Do you continue in array menu - 9 or press 0 : ");
 				break;
 				case 3:
-				System.out.print("Enter Element and position to in Linked List: ");
+				System.out.print("Enter Element and then position to be add in Linked List: ");
                 list.head = list.insertAtPos(scan.nextInt(),scan.nextInt(),list.head);
 				System.out.println("Data Inserted");
-				System.out.print("Do you continue in array menu - 9 or press enter : ");
+				System.out.print("Do you continue in array menu - 9 or press 0 : ");
 				break;
 				case 4:
 				System.out.println("Enter position to delete from Linked List: ");
-                list.head = list.delete(scan.nextInt(),list.head);
+                list.head = list.deleteElements(scan.nextInt(),list.head);
 				System.out.println("Element deleted");
-				System.out.print("Do you continue in array menu - 9 or press enter : ");
+				System.out.print("Do you continue in array menu - 9 or press 0 : ");
 				break;
 				case 5:
 				System.out.println("Printing Linked List Data: ");
-				list.display(list.head);
-				System.out.print("Do you continue in array menu - 9 or press enter : ");
+				list.displayElements(list.head);
+				System.out.print("Do you continue in array menu - 9 or press 0 : ");
 				break;
 				case 6:
 				System.out.println("Calculating Length of LinkedList: ");
                 int count = list.length(list.head);
 				System.out.println("Length of LinkedList: "+count);
-				System.out.print("Do you continue in array menu - 9 or press enter : ");
+				System.out.print("Do you continue in array menu - 9 or press 0 : ");
 				break;
 				case 7:
 				System.out.println("Reversing LinkedList: ");
-                list.head = list.reverse(list.head);
+                list.head = list.reverseElements(list.head);
 				System.out.println("Element reserved..");
-				System.out.print("Do you continue in array menu - 9 or press enter : ");
+				System.out.print("Do you continue in array menu - 9 or press 0 : ");
 				break;
 				case 8:
 				System.exit(0);
@@ -187,13 +190,8 @@ public class LinkedListOperations {
                 System.out.println("Plese enter number from metioned menu.");
                 break;
             }
-
-
         }while(scan.nextInt() == 9);
-
-        
-
-
-    }
+		
+	}
 
 }

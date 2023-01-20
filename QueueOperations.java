@@ -58,17 +58,17 @@ public class QueueOperations {
                 System.out.println("Enter array element: ");
                 qo.enqueue(scan.nextInt());
                 System.out.println("Enqueued element in queue");
-                System.out.print("Do you continue in array menu enter - 9 or press enter : ");
+                System.out.print("Do you continue in array menu enter - 9 or press 0 : ");
                 break;
                 case 2:
                 System.out.println("Dequeue Queue Element: ");
                 qo.dequeue();
                 System.out.println("Dequeued element in queue");
-                System.out.print("Do you continue in array menu enter - 9 or press enter : ");
+                System.out.print("Do you continue in array menu enter - 9 or press 0 : ");
                 break;
                 case 3:
                 qo.display();
-                System.out.print("Do you continue in array menu enter - 9 or press enter : ");
+                System.out.print("Do you continue in array menu enter - 9 or press 0 : ");
                 break;
                 default:
                 System.out.println("Plese enter number from metioned menu.");
@@ -76,5 +76,6 @@ public class QueueOperations {
             }
 
         }while(scan.nextInt() == 9);
+        
     }
 }
