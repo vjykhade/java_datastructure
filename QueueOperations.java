@@ -13,7 +13,7 @@ public class QueueOperations {
     void enqueue(int a)
   {
     if(rear==inputArray.length-1)
-		System.out.println("overflow");
+		System.out.println("Queue is overflow");
 	else
 		inputArray[++rear]=a;
 	
@@ -24,7 +24,7 @@ public class QueueOperations {
    {
      int x=-1;
 	 if(front==-1)
-		System.out.println("underflow");
+		System.out.println("Queue is underflow");
 	 else
 		x=inputArray[front++];
 	 if(rear==0)
