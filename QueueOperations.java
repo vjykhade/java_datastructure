@@ -45,7 +45,7 @@ public class QueueOperations {
     {
         QueueOperations qo = new QueueOperations();
         do {
-            System.out.println("*****Linked List Menu*****");
+            System.out.println("*****Queue Menu*****");
             System.out.println("1.Enqueue");
             System.out.println("2.Dequeue");
             System.out.println("3.Display");
