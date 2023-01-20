@@ -30,7 +30,7 @@ public class ArrayOperations {
                 {
                     inputArray[i] = in.nextInt();
                 }
-                System.out.print("Do you continue in array menu - 9 or press enter : ");
+                System.out.print("Do you continue in array menu - 9 or press 0 : ");
                 break;
                 case 2:
                 System.out.println("******Sorting Array******");
